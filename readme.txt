@@ -1,0 +1,1 @@
+This project is to follow along with lecture #1.
