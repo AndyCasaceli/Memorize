@@ -9,18 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var viewModel: EmojiMemoryGame
-    
     var body: some View {
+        let numberOfCards = viewModel.cards.count
         HStack {
             ForEach(viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     viewModel.choose(card: card)
                 }
+                .aspectRatio(2 / 3, contentMode: .fit)  // Provide height/width ratio per Task 3
             }
         }
         .padding()
         .foregroundColor(.orange)
-        .font(.largeTitle)
+        .font(numberOfCards > 8 ? .title : .largeTitle)  // Change font based on number of cards in game per Task 5
     }
 }
 

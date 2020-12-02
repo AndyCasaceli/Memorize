@@ -12,8 +12,9 @@ class EmojiMemoryGame {
         
     
     static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = [ "👻", "🎃", "😈" ]
-        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in
+        let emojis = [ "👻", "🎃", "😈", "🕷", "🧙" ]
+        let randomNumberOfPairs = Int.random(in: 2...5)  // Generate random number of pairs between 2 and 5 per Task 4
+        return MemoryGame<String>(numberOfPairsOfCards: randomNumberOfPairs) { pairIndex in
             return emojis[pairIndex]
         }
     }

@@ -20,6 +20,7 @@ struct MemoryGame<CardContent> {
             let content = cardContentFactory(pairIndex)
             cards.append(Card(id: pairIndex * 2, content: content))
             cards.append(Card(id: pairIndex * 2 + 1, content: content))
+            cards.shuffle() // Shuffle the cards per Task 2
         }
     }
     
