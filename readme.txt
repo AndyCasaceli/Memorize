@@ -1,1 +1,1 @@
-This project is to follow along with lecture #1.
+This project is to follow along with the cs193p lectures.
