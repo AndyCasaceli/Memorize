@@ -1,1 +1,1 @@
-This project is to follow along with the cs193p lectures.
+This project is to follow along with the cs193p lectures.  Currently up-to-date through lecture 2.
