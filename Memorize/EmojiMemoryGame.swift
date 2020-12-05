@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-class EmojiMemoryGame {
-    private(set) var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+class EmojiMemoryGame: ObservableObject {
+    @Published private(set) var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
         
     
     static func createMemoryGame() -> MemoryGame<String> {
@@ -18,7 +18,7 @@ class EmojiMemoryGame {
             return emojis[pairIndex]
         }
     }
-    
+        
     // MARK: - Access to the Model
     
     var cards: [MemoryGame<String>.Card] {
